@@ -1,0 +1,24 @@
+---
+config:
+  theme: neutral
+---
+gantt
+  title Project Timeline
+  dateFormat  YYYY-MM-DD
+  axisFormat  %b %d
+  tickInterval 1w
+  todayMarker off
+
+  section Design
+  Design  :task1, 2026-01-01, 5d
+  
+  section Build
+  Build :task2, after task1, 5d
+  Internal Testing :task3, after task2, 5d
+    
+  section Test
+  SIT :task4, after task3, 5d
+  UAT :task5, after task4, 5d
+
+  Start Testing :vert, v1, after task3, 1d
+  Go Live :vert, v2, after task5, 1d
