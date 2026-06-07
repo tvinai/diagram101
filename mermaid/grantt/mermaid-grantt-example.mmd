@@ -6,8 +6,13 @@ gantt
   title Project Timeline
   dateFormat  YYYY-MM-DD
   axisFormat  %b %d
-  tickInterval 1w
+  tickInterval 1week
   todayMarker off
+  excludes weekends
+  weekday monday
+
+  section Timeline
+  Start :task0, 2025-12-29, 0d
 
   section Design
   Design  :task1, 2026-01-01, 5d
@@ -20,5 +25,10 @@ gantt
   SIT :task4, after task3, 5d
   UAT :task5, after task4, 5d
 
+  section Milestones
+  Start Testing :milestone, milestone1, after task3, 0d
+  Go Live :milestone, milestone2, after task5, 0d
+
+  Start :vert, v0, 2025-12-29, 1d
   Start Testing :vert, v1, after task3, 1d
   Go Live :vert, v2, after task5, 1d
